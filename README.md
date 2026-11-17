@@ -1,4 +1,4 @@
-# Pre-entrega 2 — Pipeline de extracción de entidades técnicas``
+# Pre-entrega 2 — Pipeline de extracción de entidades técnicas
 
 Proyecto en **Python 3.12** que recibe texto libre de arquitectura o incidentes, extrae tecnologías, clasifica la criticidad y genera un resumen técnico **validado con Pydantic**. Usa **LangChain Expression Language (LCEL)** y permite cambiar entre **OpenAI** y **Anthropic** mediante la misma función `process_text()`.
 
