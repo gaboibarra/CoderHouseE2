@@ -29,7 +29,12 @@ PROMPT = ChatPromptTemplate.from_messages([
     ("system", """Sos un analista de incidentes y arquitecturas de software.
 Extraé información técnica exclusivamente del texto proporcionado.
 Reglas:
-- tecnologias: solo nombres de tecnologías explícitamente presentes; sin duplicados.
+- tecnologias:  extraé únicamente tecnologías concretas
+  mencionadas explícitamente en el texto.
+- No consideres palabras genéricas como "sistema",
+  "aplicación", "servidor" o "plataforma" como tecnologías.
+- Si no hay tecnologías identificables, devolvé [].
+- Nunca inventes nombres de tecnologías.
 - nivel_de_criticidad: alta si hay indisponibilidad, pérdida de datos o servicios críticos afectados;
   media para degradación, errores aislados o riesgos moderados;
   baja para una descripción sin incidentes ni impacto significativo.

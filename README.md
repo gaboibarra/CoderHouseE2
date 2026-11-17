@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Pre-entrega 2 — Pipeline de extracción de entidades técnicas
 
 Proyecto en **Python 3.12** que recibe texto libre de arquitectura o incidentes, extrae tecnologías, clasifica la criticidad y genera un resumen técnico **validado con Pydantic**. Usa **LangChain Expression Language (LCEL)** y permite cambiar entre **OpenAI** y **Anthropic** mediante la misma función `process_text()`.
@@ -149,6 +148,3 @@ Se conserva el criterio de **selección de proveedor y asincronía**, pero en ve
 - [LangChain Anthropic — structured output](https://reference.langchain.com/python/langchain-anthropic/chat_models/ChatAnthropic/with_structured_output)
 - [LCEL y Runnables](https://reference.langchain.com/python/langchain-core/runnables/base/Runnable)
 - [Pydantic](https://docs.pydantic.dev/latest/)
-=======
-# CoderHouseE2
->>>>>>> origin/main

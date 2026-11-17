@@ -18,9 +18,18 @@ def test_valido():
 
 
 def test_lista_vacia():
-    dato = valido(); dato["tecnologias"] = []
-    with pytest.raises(ValidationError):
-        ExtraccionTecnica.model_validate(dato)
+    """
+    Verifica que el esquema permita no encontrar
+    tecnologías explícitas en el texto.
+    """
+
+    resultado = ExtraccionTecnica(
+        tecnologias=[],
+        nivel_de_criticidad="baja",
+        resumen_tecnico="No se identifican tecnologías concretas."
+    )
+
+    assert resultado.tecnologias == []
 
 
 def test_tecnologia_sin_nombre():

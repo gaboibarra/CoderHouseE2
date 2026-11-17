@@ -18,9 +18,13 @@ class ExtraccionTecnica(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
     tecnologias: list[str] = Field(
-        ..., min_length=1,
-        description="Tecnologías explícitamente mencionadas en el texto, sin duplicados."
+    default_factory=list,
+    description=(
+        "Lista de tecnologías explícitamente mencionadas. "
+        "Si no se identifica ninguna, devolver una lista vacía."
+        )
     )
+
     nivel_de_criticidad: Criticidad = Field(
         ..., description="baja, media o alta de acuerdo con el impacto descrito."
     )
