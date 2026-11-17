@@ -146,7 +146,31 @@ python -m pytest -v
 ```
 <img width="640" height="224" alt="image" src="https://github.com/user-attachments/assets/0925f2d5-de0b-438b-9373-1cbca2d75be2" />
 
-Estas pruebas **no requieren claves API ni generan consumo**. Se usan respuestas simuladas para probar tres situaciones: (a) validación correcta, (b) respuesta inválida que se recupera al segundo intento y (c) fallas persistentes hasta agotar tres intentos.
+Se implementaron **14 pruebas automatizadas con pytest**, ejecutadas exitosamente en Python 3.12.10.
+
+Las pruebas se organizan en dos grupos:
+
+**Validación del esquema Pydantic (8 pruebas):**
+- Validación de objetos correctos.
+- Aceptación de listas vacías cuando no se identifican tecnologías.
+- Rechazo de nombres de tecnologías vacíos.
+- Detección de tecnologías duplicadas.
+- Rechazo de niveles de criticidad inválidos.
+- Validación de la longitud mínima del resumen.
+- Detección de campos obligatorios faltantes.
+- Rechazo de campos adicionales no permitidos.
+
+**Validación del pipeline LCEL (6 pruebas):**
+- Procesamiento de una respuesta estructurada correcta.
+- Detección de respuestas truncadas de OpenAI.
+- Detección de respuestas truncadas de Anthropic.
+- Detección de JSON inválido.
+- Recuperación ante una respuesta inválida mediante reintentos.
+- Comportamiento cuando se agotan los tres intentos configurados.
+
+Estas pruebas utilizan respuestas simuladas, por lo que **no requieren claves API ni generan consumo de tokens**.
+
+**Resultado obtenido:** `14 passed in 10.42s`.
 
 ### Prueba de estrés / texto ambiguo
 
