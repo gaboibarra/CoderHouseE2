@@ -166,15 +166,15 @@ El resumen técnico conserva la información disponible sin agregar componentes 
 
 En esta prueba, el pipeline:
 
-Recibe un texto ambiguo.
+- Recibe un texto ambiguo.
 
-Ejecuta la cadena LCEL mediante ainvoke().
+- Ejecuta la cadena LCEL mediante ainvoke().
 
-Obtiene una respuesta estructurada del modelo.
+- Obtiene una respuesta estructurada del modelo.
 
-Valida el resultado con Pydantic.
+- Valida el resultado con Pydantic.
 
-Devuelve el objeto validado sin necesidad de realizar reintentos.
+- Devuelve el objeto validado sin necesidad de realizar reintentos.
 
 Resultado: extracción exitosa con cero tecnologías identificadas.
 
