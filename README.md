@@ -80,13 +80,19 @@ Probar **ambos** proveedores en modo asíncrono (secuencial para mostrar logs le
 ```powershell
 python main.py
 ```
+<img width="642" height="257" alt="image" src="https://github.com/user-attachments/assets/62ae1344-97fa-47cc-9e8c-6a80f83b022c" />
 
 Solo OpenAI o Anthropic:
 
 ```powershell
 python main.py --provider openai
+```
+<img width="641" height="145" alt="image" src="https://github.com/user-attachments/assets/c79eb33e-1cd9-488d-a088-b3c10d375867" />
+
+```powershell
 python main.py --provider anthropic
 ```
+<img width="641" height="158" alt="image" src="https://github.com/user-attachments/assets/25d051a3-5217-45b7-88a4-d8140b8e1aab" />
 
 Texto personalizado (PowerShell):
 
