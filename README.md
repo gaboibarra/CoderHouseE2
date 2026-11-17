@@ -170,7 +170,7 @@ Las pruebas se organizan en dos grupos:
 
 Estas pruebas utilizan respuestas simuladas, por lo que **no requieren claves API ni generan consumo de tokens**.
 
-**Resultado obtenido:** `14 passed in 10.42s`.
+**Resultado obtenido:** `14 passed in 10.06s`.
 
 ### Prueba de estrés / texto ambiguo
 
