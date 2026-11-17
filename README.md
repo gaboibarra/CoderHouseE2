@@ -89,6 +89,7 @@ python main.py --provider openai
 ```
 <img width="641" height="145" alt="image" src="https://github.com/user-attachments/assets/c79eb33e-1cd9-488d-a088-b3c10d375867" />
 
+
 ```powershell
 python main.py --provider anthropic
 ```
@@ -126,13 +127,24 @@ asyncio.run(main())
   "resumen_tecnico": "El servicio de pagos registra errores HTTP 500 que afectan el procesamiento de transacciones."
 }
 ```
+<img width="641" height="155" alt="image" src="https://github.com/user-attachments/assets/5262fbf1-82cf-4c31-b09b-5892d285b4dd" />
+
+
 
 ## Pruebas unitarias
 
 ```powershell
 python -m pytest -q
+```
+<img width="644" height="44" alt="image" src="https://github.com/user-attachments/assets/71f797bb-dc2b-43fd-8cb9-7413eb80c78a" />
+
+
+
+
+```powershell
 python -m pytest -v
 ```
+<img width="640" height="224" alt="image" src="https://github.com/user-attachments/assets/0925f2d5-de0b-438b-9373-1cbca2d75be2" />
 
 Estas pruebas **no requieren claves API ni generan consumo**. Se usan respuestas simuladas para probar tres situaciones: (a) validación correcta, (b) respuesta inválida que se recupera al segundo intento y (c) fallas persistentes hasta agotar tres intentos.
 
