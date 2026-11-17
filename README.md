@@ -154,7 +154,29 @@ Estas pruebas **no requieren claves API ni generan consumo**. Se usan respuestas
 python main.py --provider openai --text "El sistema funciona raro desde ayer y hay problemas."
 ```
 
-El esquema exige por lo menos una tecnología explícita. Este texto no indica ninguna. La instrucción prohíbe inventar, así que el resultado correcto puede ser un **error controlado tras agotar los reintentos**. No se debe interpretar como falla del programa. Podría diseñarse otro contrato que permita `tecnologias=[]`, pero aquí se aplica la restricción pedida como ejercicio.
+El texto de entrada no menciona ninguna tecnología específica. Por lo tanto, el pipeline devuelve una lista vacía ("tecnologias": []) en lugar de inventar una entidad técnica.
+
+Esta decisión fue incorporada al esquema Pydantic para permitir que la ausencia de tecnologías también constituya un resultado válido.
+
+La criticidad se clasificó como baja porque el texto no proporciona evidencia suficiente de un impacto concreto o una interrupción crítica del servicio.
+
+El resumen técnico conserva la información disponible sin agregar componentes o incidentes no mencionados.
+
+### Comportamiento de la validación
+
+En esta prueba, el pipeline:
+
+Recibe un texto ambiguo.
+
+Ejecuta la cadena LCEL mediante ainvoke().
+
+Obtiene una respuesta estructurada del modelo.
+
+Valida el resultado con Pydantic.
+
+Devuelve el objeto validado sin necesidad de realizar reintentos.
+
+Resultado: extracción exitosa con cero tecnologías identificadas.
 
 ## Resiliencia y logs
 
