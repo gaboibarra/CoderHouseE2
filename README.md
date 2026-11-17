@@ -39,17 +39,20 @@ ExtraccionTecnica (objeto Pydantic) → JSON
 
 ```powershell
 py -3.12 -m venv .venv
+```
 <img width="695" height="28" alt="image" src="https://github.com/user-attachments/assets/123aef4d-d3dd-43ce-9bd2-7816862cbc94" />
-
+```powershell
 .\.venv\Scripts\Activate.ps1
+```
 <img width="700" height="17" alt="image" src="https://github.com/user-attachments/assets/edcee656-3655-41e0-9e3b-a56876b14a76" />
 
+```powershell
 python -m pip install -r requirements.txt
-
-python --version
-<img width="697" height="27" alt="image" src="https://github.com/user-attachments/assets/051d6637-a196-4a0f-8ef7-8f30be3048ca" />
-
 ```
+```powershell
+python --version
+```
+<img width="697" height="27" alt="image" src="https://github.com/user-attachments/assets/051d6637-a196-4a0f-8ef7-8f30be3048ca" />
 
 3. Crear `.env` desde `.env.example`:
 
