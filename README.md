@@ -153,6 +153,8 @@ Estas pruebas **no requieren claves API ni generan consumo**. Se usan respuestas
 ```powershell
 python main.py --provider openai --text "El sistema funciona raro desde ayer y hay problemas."
 ```
+<img width="642" height="122" alt="image" src="https://github.com/user-attachments/assets/d6af16a1-3347-40dd-894a-ae4b636fd820" />
+
 
 El texto de entrada no menciona ninguna tecnología específica. Por lo tanto, el pipeline devuelve una lista vacía ("tecnologias": []) en lugar de inventar una entidad técnica.
 
