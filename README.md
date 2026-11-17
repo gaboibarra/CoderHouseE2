@@ -30,7 +30,7 @@ ExtraccionTecnica (objeto Pydantic) → JSON
 - `tests/test_schemas.py`: validaciones correctas e incorrectas.
 - `tests/test_chain.py`: salidas truncadas, JSON inválido y reintentos con modelos simulados.
 - `.env.example`: plantilla de variables. **No subir `.env`.**
-- `requirements.txt`: dependencias; `GUIA_DE_ESTUDIO.md`: explicación didáctica.
+- `requirements.txt`: dependencias;
 
 ## Requisitos e instalación (Windows PowerShell)
 
@@ -39,10 +39,21 @@ ExtraccionTecnica (objeto Pydantic) → JSON
 
 ```powershell
 py -3.12 -m venv .venv
+```
+<img width="695" height="28" alt="image" src="https://github.com/user-attachments/assets/123aef4d-d3dd-43ce-9bd2-7816862cbc94" />
+
+```powershell
 .\.venv\Scripts\Activate.ps1
+```
+<img width="700" height="17" alt="image" src="https://github.com/user-attachments/assets/edcee656-3655-41e0-9e3b-a56876b14a76" />
+
+```powershell
 python -m pip install -r requirements.txt
+```
+```powershell
 python --version
 ```
+<img width="697" height="27" alt="image" src="https://github.com/user-attachments/assets/051d6637-a196-4a0f-8ef7-8f30be3048ca" />
 
 3. Crear `.env` desde `.env.example`:
 
@@ -69,13 +80,20 @@ Probar **ambos** proveedores en modo asíncrono (secuencial para mostrar logs le
 ```powershell
 python main.py
 ```
+<img width="642" height="257" alt="image" src="https://github.com/user-attachments/assets/62ae1344-97fa-47cc-9e8c-6a80f83b022c" />
 
 Solo OpenAI o Anthropic:
 
 ```powershell
 python main.py --provider openai
+```
+<img width="641" height="145" alt="image" src="https://github.com/user-attachments/assets/c79eb33e-1cd9-488d-a088-b3c10d375867" />
+
+
+```powershell
 python main.py --provider anthropic
 ```
+<img width="641" height="158" alt="image" src="https://github.com/user-attachments/assets/25d051a3-5217-45b7-88a4-d8140b8e1aab" />
 
 Texto personalizado (PowerShell):
 
@@ -109,13 +127,24 @@ asyncio.run(main())
   "resumen_tecnico": "El servicio de pagos registra errores HTTP 500 que afectan el procesamiento de transacciones."
 }
 ```
+<img width="641" height="155" alt="image" src="https://github.com/user-attachments/assets/5262fbf1-82cf-4c31-b09b-5892d285b4dd" />
+
+
 
 ## Pruebas unitarias
 
 ```powershell
 python -m pytest -q
+```
+<img width="644" height="44" alt="image" src="https://github.com/user-attachments/assets/71f797bb-dc2b-43fd-8cb9-7413eb80c78a" />
+
+
+
+
+```powershell
 python -m pytest -v
 ```
+<img width="640" height="224" alt="image" src="https://github.com/user-attachments/assets/0925f2d5-de0b-438b-9373-1cbca2d75be2" />
 
 Estas pruebas **no requieren claves API ni generan consumo**. Se usan respuestas simuladas para probar tres situaciones: (a) validación correcta, (b) respuesta inválida que se recupera al segundo intento y (c) fallas persistentes hasta agotar tres intentos.
 
