@@ -30,7 +30,7 @@ ExtraccionTecnica (objeto Pydantic) → JSON
 - `tests/test_schemas.py`: validaciones correctas e incorrectas.
 - `tests/test_chain.py`: salidas truncadas, JSON inválido y reintentos con modelos simulados.
 - `.env.example`: plantilla de variables. **No subir `.env`.**
-- `requirements.txt`: dependencias; `GUIA_DE_ESTUDIO.md`: explicación didáctica.
+- `requirements.txt`: dependencias;
 
 ## Requisitos e instalación (Windows PowerShell)
 
