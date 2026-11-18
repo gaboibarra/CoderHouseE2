@@ -120,13 +120,6 @@ asyncio.run(main())
 
 **Salida de ejemplo** (puede variar; no es una ejecución verificada de la API):
 
-```json
-{
-  "tecnologias": ["FastAPI", "Redis", "PostgreSQL"],
-  "nivel_de_criticidad": "alta",
-  "resumen_tecnico": "El servicio de pagos registra errores HTTP 500 que afectan el procesamiento de transacciones."
-}
-```
 <img width="641" height="155" alt="image" src="https://github.com/user-attachments/assets/5262fbf1-82cf-4c31-b09b-5892d285b4dd" />
 
 
